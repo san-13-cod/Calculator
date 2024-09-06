@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+:root {
+  --backgroundColor: #2df2e2;
+  --buttonColor: #c0edec;
+  --darkColor: #000807;
+  --buttonDark: #030d0f;
+  --buttonColorDark: #0e4a4b;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(222, 213, 213);
+}
+
+.box {
+  width: 400px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+}
+
+.resultArea {
+  width: 100%;
+  height: 30%;
+  background-color: var(--darkColor);
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.operation {
+  width: 100%;
+  height: 60%;
+  color: var(--backgroundColor);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: 0.5rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.result {
+    width: 100%;
+    height: 40%;
+    font-size: 1.9rem;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 0.5rem;
+    font-weight: 600;
+}
+
+.buttonArea {
+  width: 100%;
+  height: 70%;
+  background-color: black;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border-radius: 0rem 0rem 2rem 2rem;
+}
+
+.buttonArea button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  border: 0;
+  background-color: var(--buttonDark);
+  color: white;
+}
+
+.buttonArea button:hover{
+    background-color: #051216;
+}
+
+.sign{
+    background-color: var(--buttonColorDark) !important;
+    font-size: 2rem !important;
+}
+
+.sign:hover{
+    background-color: #0b3a3a !important;
+}
+
+.buttonArea button:last-child {
+  grid-column: span 2;
+  border-bottom-right-radius: 1.5rem;
+}
+
+.buttonArea button:nth-child(17){
+    border-bottom-left-radius: 1.5rem;
+}
+
+
+@media screen and (max-width: 400px) {
+    .box{
+        width: 90%;
+        height: 85%;
+        position: relative;
+    }
+    h1{
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .operation{
+        font-size: 2rem;
+        padding-right: 1.5rem;
+    }
+    
+    .result {
+        font-size: 2rem;
+        padding-right: 1.5rem;
+    }
+
+    .buttonArea button{
+        font-size: 1.8rem;
+    }
+
+    .sign{
+        font-size: 2rem !important;
+    }
+}
